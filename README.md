@@ -1,58 +1,74 @@
-# UNO Multiplayer Web Game (MVP)
+# 🎴 UNO Multiplayer — Real-Time Web Game
 
-I am trying to build a MVP for online web based UNO-Multiplayer game which anyone can play anywhere with their friends instantly, be it party or games/fun.
+> A browser-based multiplayer UNO game with real-time state synchronization, room-based session management, and zero-install instant play — built for parties, built for the web.
 
-I have developed the core game logics and room creations and connections. Yet the frontend need to be improved, its not responsive yet.
+🌐 **Play Now (Advanced Version):** [uno-pro-1.onrender.com](https://uno-pro-1.onrender.com/)
 
 ---
 
-## 🚀 Getting Started (Run Locally)
+## ✨ What's Under the Hood
 
-Follow these steps to run the project on your machine:
+- 🔄 **Real-time sync** via WebSockets — all 4 players see the same game state instantly
+- 🏠 **Room-based sessions** — create or join rooms with a shareable code, no accounts needed
+- 🧠 **Server-side game logic** — card validation, turn sequencing, draw mechanics, and win detection enforced on the server, never trusted to the client
+- 🎮 **Host-controlled lifecycle** — room creator controls when the game starts
+- ⚡ **Zero install** — runs entirely in the browser, share a link and play
 
-1. Clone this repository into your machine  
-2. If you have not installed NodeJS/npm, kindly install it in your machine  
-3. Open terminal inside this folder  
-4. Give command: `cd backend`  
-5. Give command: `npm i`  
-6. Give command: `node server.js`  
-7. Type `localhost:3000` in your browser  
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Runtime | Node.js |
+| Server | Express |
+| Real-time | WebSockets (Socket.io) |
+| Frontend | HTML / CSS / JS |
+| Deployment | Render |
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/your-username/uno-multiplayer
+
+# 2. Move into backend
+cd backend
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the server
+node server.js
+
+# 5. Open in browser
+# http://localhost:3000
+```
 
 ---
 
 ## 🎮 How to Play
 
-8. You will see two buttons "create room" and "join room"  
-9. Click on "create room", Enter your name  
-10. Open `localhost:3000` in new tab, click on "join room" button  
-11. Enter the room number from previous tab  
-12. This way open two more new tabs and join the same room  
-13. Once four players are there in the room, the host (who created the room) can see "start game" button  
-14. Click on that, then you can see gameplay in all four tabs  
-15. Click on the card as per rules and play  
-16. To draw card, if you don't have, click on center UNO card image  
+1. Open `localhost:3000` — you'll see **Create Room** and **Join Room**
+2. Click **Create Room**, enter your name — note the room code shown
+3. Open 3 more browser tabs, click **Join Room**, enter the same room code
+4. Once all 4 players are in, the host sees a **Start Game** button — click it
+5. Play cards by clicking them; draw a card by clicking the center UNO deck image
+6. Standard UNO rules apply — match color or number, play action cards strategically
 
 ---
 
-## 🖼️ Gameplay Screenshots
+## 🚧 Known Limitations & What's Next
 
-![image](https://github.com/user-attachments/assets/7de9877c-59d0-4894-a68c-3b7c42440b09)
-
-![image](https://github.com/user-attachments/assets/58e892f8-b6f4-4416-bea2-f15700c4f889)
-
-![image](https://github.com/user-attachments/assets/cb306a95-6eaa-4b29-9f31-9beb73e20824)
-
----
-
-## 🌐 Play the Advanced Version Online
-
-A more developed version of this Uno game, you can play it online with your friends:  
-👉 https://uno-pro-1.onrender.com/
+| Gap | Planned Fix |
+|---|---|
+| Frontend not fully responsive | Mobile-first redesign with CSS Grid/Flexbox |
+| Fixed 4-player room size | Configurable 2–6 player lobbies |
+| No spectator mode | Read-only room join for observers |
+| No reconnection handling | Persist session state on disconnect/rejoin |
 
 ---
 
-## ✨ More Screenshots
-
-![image](https://github.com/user-attachments/assets/4dafe286-4232-4f27-afce-efdff7c1245a)
-
-![image](https://github.com/user-attachments/assets/bf0df6d7-3e02-4624-919f-ad072708cb22)
+*Core game logic and real-time infrastructure are production-ready — UI polish and mobile responsiveness are the next frontier.*
